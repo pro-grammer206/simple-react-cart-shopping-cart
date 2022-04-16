@@ -1,13 +1,180 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,300;0,400;0,600;0,900;1,200;1,500;1,700;1,900&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Anybody", cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+nav {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  gap: 0.5rem;
+  background-color: #fce043;
+  border-radius: 1rem;
+  background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+}
+nav section {
+  position: relative;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+#cartimg {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+}
+#cartimg:hover {
+  transform: scale(1.2);
+  background-color: green;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.carticon span {
+  position: absolute;
+  top: -18px;
+}
+main {
+  margin: 2rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carticon {
+    position: relative;
+  }
+  .carticon span {
+    position: absolute;
+    top: -10px;
+  }
+}
+.wall {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.1rem 0.1rem silver;
+}
+.card {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  font-weight: bold;
+  margin: auto;
+  padding: 1rem;
+  font-size: 2rem;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 0.1rem 0.1rem silver;
+}
+.card:hover {
+  box-shadow: 0 0 0.3rem 0.3rem silver;
+}
+.btn {
+  border: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+.btn:hover {
+  box-shadow: 0 0 0.3rem 0.3rem silver;
+}
+.card-cart {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  width: 700px;
+  margin: auto;
+  gap: 0.2rem;
+  align-items: center;
+  box-shadow: 0 0 2px 2px silver;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.5rem silver;
+}
+.card-cart p {
+  text-align: center;
+}
+
+.card-cart img {
+  width: 250px;
+  height: 200px;
+  margin-top: 1rem;
+}
+@media (max-width: 500px) {
+  .card-cart {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.subcard {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+}
+.subcard div {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subcard img {
+  width: 3rem;
+  height: 3rem;
+}
+.cartpage {
+  display: flex;
+  font-weight: bold;
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.shake {
+  animation-name: shakka;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes shakka {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
