@@ -6,3 +6,4 @@
 2. redux toolkit
 3. react router dom
 
+## [Deployed on Netlify](https://adorable-starship-734886.netlify.app/)
