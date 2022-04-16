@@ -9,7 +9,7 @@ const Products = () => {
       <h2>Products</h2>
       <div className="wall">
         {items.map((item) => (
-          <Link to={`/products/${item.id}`} key={item.id}>
+          <Link to={`/product/${item.id}`} key={item.id}>
             <section className="card">
               <img src={item.img} alt={item.name} />
               <h3>{item.name}</h3>

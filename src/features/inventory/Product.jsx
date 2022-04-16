@@ -25,7 +25,11 @@ const Product = () => {
             </div>
             <p>Rs {item.price}</p>
             <p>{item.description}</p>
-            <p>Added {item.qty} items</p>
+            {item.qty > 0 ? (
+              <p>
+                Added {item.qty} {item.qty === 1 ? "item" : "items"}
+              </p>
+            ) : null}
           </section>
         ))}
     </>

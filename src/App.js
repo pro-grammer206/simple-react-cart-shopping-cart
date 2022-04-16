@@ -1,4 +1,3 @@
-import Products from "./features/inventory/Products";
 import Nav from "./components/Nav";
 import { Outlet } from "react-router-dom";
 
